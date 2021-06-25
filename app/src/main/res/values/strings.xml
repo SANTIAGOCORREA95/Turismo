@@ -2,4 +2,8 @@
     <string name="app_name">Turismo</string>
     <string name="nombre">Desierto del Tatacao</string>
     <string name="descripcion">Descubra una flora y fauna únicas y el paisaje de Colombia en el desierto de Tatacoa, la segunda mayor zona árida del pais.</string>
+    <string name="Perfil">Soy Santiago Correa Muñoz, tengo 25 años, mi cumpleaños es el 21 de julio, vivo en la cuidad de medellin, mi comida favorita son las papas fritas y mi actividad favorita es la lectura, tengo un titulo de administrador del ITM y actualmente estudio en el CESDE.</string>
+    <string name="opcion1">Acercade</string>
+    <string name="opcion2">Español</string>
+    <string name="opcion3">Ingles</string>
 </resources>

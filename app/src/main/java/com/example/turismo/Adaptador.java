@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class Adaptador extends RecyclerView.Adapter<Adaptador.viewHolder> {
@@ -48,13 +50,17 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.viewHolder> {
             super(itemView);
             actividad=itemView.findViewById(R.id.actividad);
             nombre=itemView.findViewById(R.id.nombre);
-            //descripcion=itemView.findViewById(R.id.descripcion);
+            descripcion=itemView.findViewById(R.id.descripcion);
         }
 
         public void actualizar(Actividad_Turistica actividad_turistica) {
-            actividad.setImageResource(actividad_turistica.getActividad());
+
             nombre.setText(actividad_turistica.getNombre());
-            //descripcion.setText(actividad_turistica.getDescripcion());
+            descripcion.setText(actividad_turistica.getDescripcion());
+
+            Picasso.with(itemView.getContext())
+                    .load(actividad_turistica.getActividad())
+                    .into(actividad);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

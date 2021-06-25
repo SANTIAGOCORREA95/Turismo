@@ -1,10 +1,24 @@
 package com.example.turismo;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.squareup.picasso.Picasso;
+
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     TextView nombre;
     TextView descripcion;
     Actividad_Turistica actividad;
+    Map<String, Object> actividadTuristica = new HashMap<>();//
+
+    FirebaseFirestore baseDatos = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +41,13 @@ public class MainActivity extends AppCompatActivity {
 
         actividad=(Actividad_Turistica) getIntent().getSerializableExtra("datosActividades");
 
-        fotoActividad.setImageResource(actividad.getActividad());
         nombre.setText(actividad.getNombre());
         descripcion.setText(actividad.getDescripcion());
+
+        Picasso.with(MainActivity.this)
+                .load(actividad.getActividad())
+                .into(fotoActividad);
+
     }
+
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Turism</string>
+    <string name="nombre">Tatacoa Desert</string>
+    <string name="descripcion">Discover a unique flora and fauna and the landscape of Colombia in the Tatacoa desert, the second largest arid zone in the country</string>
+    <string name="Perfil">I am Santiago Correa Muñoz, I am 25 years old, my birthday is July 21, I live in the city of Medellin, my favorite food is French fries and my favorite activity is reading, I have an administrator degree from ITM and I currently study in the CESDE.</string>
+    <string name="opcion1">About</string>
+    <string name="opcion2">Spanish</string>
+    <string name="opcion3">English</string>
+</resources>
